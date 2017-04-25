@@ -5,6 +5,7 @@ DOTFOLDER=$HOME/Development/perso/dotfiles
 VSFOLDER="$HOME/Library/Application Support/Code/User"
 WHEREAMI=$(pwd)
 
-cp -R $DOTFOLDER/vscode/* "${VSFOLDER}"
-cp $DOTFOLDER/*rc $HOME/
+cp -iR $DOTFOLDER/vscode/* "${VSFOLDER}"
+cp -i $DOTFOLDER/.zshrc $HOME/
+cp -i $DOTFOLDER/.vimrc $HOME/
 echo "Installation done"
