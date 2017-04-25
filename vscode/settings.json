@@ -5,7 +5,7 @@
     "[c]": {
         "editor.quickSuggestions": true
     },
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "workbench.iconTheme": "vs-seti",
     "editor.fontLigatures": true
 }
