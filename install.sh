@@ -8,4 +8,5 @@ WHEREAMI=$(pwd)
 cp -iR $DOTFOLDER/vscode/* "${VSFOLDER}"
 cp -i $DOTFOLDER/.zshrc $HOME/
 cp -i $DOTFOLDER/.vimrc $HOME/
+source $HOME/.zshrc
 echo "Installation done"
