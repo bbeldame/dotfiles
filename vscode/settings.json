@@ -7,6 +7,5 @@
     },
     "window.zoomLevel": 0,
     "workbench.iconTheme": "vs-seti",
-    "editor.fontLigatures": true,
-    "workbench.colorTheme": "Solarized Light"
+    "editor.fontLigatures": true
 }

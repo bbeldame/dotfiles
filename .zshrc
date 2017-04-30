@@ -4,6 +4,7 @@ export PATH=/Users/bbeldame/Library/Android/sdk/tools/:$PATH
 ZSH_THEME="miloshadzic"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+[ -f .hidrc ] && source .hidrc
 
 function cs() {
    cd $1
