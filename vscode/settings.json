@@ -6,5 +6,6 @@
         "editor.quickSuggestions": true
     },
     "window.zoomLevel": 0,
-    "workbench.iconTheme": "vs-seti"
+    "workbench.iconTheme": "vs-seti",
+    "editor.tabSize": 2
 }
