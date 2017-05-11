@@ -7,6 +7,7 @@ WHEREAMI=$(pwd)
 
 cp "${VSFOLDER}/keybindings.json" $DOTFOLDER/vscode/
 cp "${VSFOLDER}/settings.json" $DOTFOLDER/vscode/
+cp -R "${VSFOLDER}/snippets" $DOTFOLDER/vscode/
 cp $HOME/.zshrc $DOTFOLDER/
 cp $HOME/.vimrc $DOTFOLDER/
 cd $DOTFOLDER
