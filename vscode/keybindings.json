@@ -32,5 +32,26 @@
         "key": "alt+o",
         "command": "-C_Cpp.SwitchHeaderSource",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+[Period]",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "cmd+[Comma]",
+        "command": "workbench.action.terminal.focusPrevious"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "workbench.action.terminal.new"
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "-workbench.action.terminal.new"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
     }
 ]

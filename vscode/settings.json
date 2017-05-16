@@ -9,5 +9,6 @@
     "workbench.iconTheme": "vs-seti",
     "editor.tabSize": 2,
     "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-    "editor.snippetSuggestions": "top"
+    "editor.snippetSuggestions": "top",
+    "todoIgnore": ["**/node_modules/**", "**/dist/**"]
 }
