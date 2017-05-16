@@ -8,7 +8,8 @@
     "window.zoomLevel": 0,
     "workbench.iconTheme": "vs-seti",
     "editor.tabSize": 2,
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
     "editor.snippetSuggestions": "top",
+    "editor.fontLigatures": true,
     "todoIgnore": ["**/node_modules/**", "**/dist/**"]
 }
