@@ -2,9 +2,15 @@
 	"Print to console": {
 		"prefix": "csl",
 		"body": [
-			"console.log('$1');",
-			"$2"
+			"console.log('$1');"
 		],
 		"description": "Log output to console"
+	},
+	"Print to console descriptive": {
+		"prefix": "csld",
+		"body": [
+			"console.log('$1', $1);"
+		],
+		"description": "Log output to console descriptively"
 	}
 }
