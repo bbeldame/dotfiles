@@ -1,10 +1,4 @@
 {
-    "[cpp]": {
-        "editor.quickSuggestions": true
-    },
-    "[c]": {
-        "editor.quickSuggestions": true
-    },
     "window.zoomLevel": 0,
     "workbench.iconTheme": "vs-seti",
     "editor.tabSize": 2,

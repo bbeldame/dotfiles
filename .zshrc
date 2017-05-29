@@ -1,6 +1,10 @@
 export ZSH=/Users/bbeldame/.oh-my-zsh
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=/Users/bbeldame/Library/Android/sdk/tools/:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bbeldame/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/bbeldame/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
 ZSH_THEME="miloshadzic"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
@@ -18,7 +22,7 @@ alias csperso="cs ~/Development/perso"
 alias cssdw="cs ~/Development/sdw"
 alias cs42="cs ~/Development/42"
 alias csrt="cs ~/Development/42/RT"
-alias csmonop="cd ~/Development/oyez/monoprix"
+alias csmonop="cs ~/Development/oyez/monoprix"
 alias rt="make re && ./rtv1 scenes/pluff.rtv1"
 alias rtez="make re && ./rtv1 scenes/easy.rtv1"
 alias p="pwd"
@@ -47,3 +51,5 @@ alias yt="yarn test"
 alias yd="yarn dev"
 alias pls="sudo"
 alias please="pls"
+alias 42FC="sh ~/Development/42/42FileChecker/42FileChecker.sh"
+source <(kubectl completion zsh)
