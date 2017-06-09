@@ -5,5 +5,11 @@
     "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
     "editor.snippetSuggestions": "top",
     "editor.fontLigatures": true,
-    "todoIgnore": ["**/node_modules/**", "**/dist/**"]
+    "todoIgnore": [
+        "**/node_modules/**",
+        "**/dist/**"
+    ],
+    "editor.minimap.enabled": false,
+    "editor.renderIndentGuides": true,
+    "diffEditor.renderSideBySide": false,
 }
