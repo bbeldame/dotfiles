@@ -14,6 +14,20 @@ function cs() {
    cd $1
    ls
 }
+
+function kcgpg() {
+   kubectl get pods | grep $1 | cut -d" " -f 1
+}
+
+function kcpfg() {
+   kubectl port-forward `kcgpg $1 | head -n 1` $2 
+}
+
+function kclogsg() {
+   kubectl logs -f `kcgpg $1 | head -n 1`
+
+}
+
 alias ali="vim ~/.zshrc"
 alias alip="source ~/.zshrc"
 alias delds="find ~/ -name \".DS_Store\" -delete"
@@ -57,3 +71,4 @@ source <(kubectl completion zsh)
 alias gogojm="node index.js"
 alias pullover="git stash && git pull && git stash pop"
 alias kcpf="kc port-forward"
+alias kcgp="kc get pods"
