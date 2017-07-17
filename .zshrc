@@ -25,7 +25,16 @@ function kcpfg() {
 
 function kclogsg() {
    kubectl logs -f `kcgpg $1 | head -n 1`
+}
 
+function kcgorec() {
+   kubectl config set-context ninja-rec --cluster=gke_monoprix-ninja-rec_europe-west1-d_master --user=gke_monoprix-ninja-rec_europe-west1-d_master --namespace=ninja
+   kubectl config use-context ninja-rec
+}
+
+function kcgodev() {
+   kubectl config set-context ninja-dev --cluster=gke_monoprix-ninja-dev_europe-west1-d_master --user=gke_monoprix-ninja-dev_europe-west1-d_master --namespace=ninja
+   kubectl config use-context ninja-dev
 }
 
 alias ali="vim ~/.zshrc"
@@ -73,3 +82,5 @@ alias pullover="git stash && git pull && git stash pop"
 alias kcpf="kc port-forward"
 alias kcgp="kc get pods"
 alias kcdp="kc describe pod"
+alias weather="curl wttr.in"
+alias al="adb logcat"
