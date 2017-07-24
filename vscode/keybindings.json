@@ -117,5 +117,15 @@
     {
         "key": "f6",
         "command": "workbench.debug.viewlet.action.enableAllBreakpoints"
+    },
+    {
+        "key": "shift+cmd+s",
+        "command": "editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "-editor.action.selectHighlights",
+        "when": "editorFocus"
     }
 ]
