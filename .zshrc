@@ -9,6 +9,7 @@ ZSH_THEME="miloshadzic"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source ~/.hidrc
+source <(kubectl completion zsh)
 
 function cs() {
    cd $1
@@ -77,7 +78,6 @@ alias ys="yarn start"
 alias pls="sudo"
 alias please="pls"
 alias 42FC="sh ~/Development/42/42FileChecker/42FileChecker.sh"
-source <(kubectl completion zsh)
 alias gogojm="node index.js"
 alias pullover="git stash && git pull && git stash pop"
 alias kcpf="kc port-forward"
