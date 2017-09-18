@@ -127,5 +127,13 @@
         "key": "shift+cmd+l",
         "command": "-editor.action.selectHighlights",
         "when": "editorFocus"
+    },
+    {
+        "key": "cmd+t",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "-workbench.view.explorer"
     }
 ]
