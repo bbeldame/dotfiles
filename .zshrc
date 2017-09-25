@@ -38,6 +38,11 @@ function kcgodev() {
    kubectl config use-context ninja-dev
 }
 
+function kcgopreprod() {
+   kubectl config set-context ninja-preprod --cluster=gke_monoprix-ninja-preprod_europe-west1-d_master --user=gke_monoprix-ninja-preprod_europe-west1-d_master --namespace=ninja
+   kubectl config use-context ninja-preprod
+}
+
 alias ali="vim ~/.zshrc"
 alias alip="source ~/.zshrc"
 alias delds="find ~/ -name \".DS_Store\" -delete"
@@ -93,3 +98,4 @@ alias sf="screenfetch -E"
 alias mr="make re"
 alias mf="make fclean"
 alias rs="echo fail"
+alias kcwhere="kc config current-context"
