@@ -135,5 +135,9 @@
     {
         "key": "shift+cmd+e",
         "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "cmd+[BracketRight]",
+        "command": "workbench.action.toggleMaximizedPanel"
     }
 ]

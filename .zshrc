@@ -16,6 +16,14 @@ function cs() {
    ls
 }
 
+function fastpush() {
+   pullover
+   yarn test -- -u
+   git add .
+   git commit -m $1
+   git push
+}
+
 function kcgpg() {
    kubectl get pods | grep $1 | cut -d" " -f 1
 }
