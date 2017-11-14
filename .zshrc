@@ -51,6 +51,10 @@ function kcgopreprod() {
    kubectl config use-context ninja-preprod
 }
 
+function portki() {
+   sudo lsof -i tcp:$1
+}
+
 alias ali="vim ~/.zshrc"
 alias alip="source ~/.zshrc"
 alias delds="find ~/ -name \".DS_Store\" -delete"
@@ -108,3 +112,6 @@ alias mf="make fclean"
 alias rs="echo fail"
 alias kcwhere="kc config current-context"
 alias rnd="adb shell input keyevent KEYCODE_MENU"
+alias es="elasticsearch"
+alias kibana="~/Documents/kibana/bin/kibana"
+alias gds="git diff --staged"

@@ -139,5 +139,10 @@
     {
         "key": "cmd+[BracketRight]",
         "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "rest-client.request",
+        "when": "editorTextFocus && editorLangId == 'http'"
     }
 ]
