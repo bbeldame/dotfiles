@@ -11,5 +11,7 @@
     ],
     "editor.minimap.enabled": false,
     "editor.renderIndentGuides": true,
-    "diffEditor.renderSideBySide": false
+    "diffEditor.renderSideBySide": false,
+    "workbench.panel.location": "bottom",
+    "explorer.confirmDragAndDrop": false
 }
