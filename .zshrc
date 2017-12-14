@@ -55,6 +55,11 @@ function portki() {
    sudo lsof -i tcp:$1
 }
 
+function kcchangenamespace() {
+   echo "kubectl config set-context $(kubectl config current-context) --namespace=<insert-namespace-name-here>"
+   kubectl config set-context $(kubectl config current-context) --namespace=$1
+}
+
 alias ali="vim ~/.zshrc"
 alias alip="source ~/.zshrc"
 alias delds="find ~/ -name \".DS_Store\" -delete"
