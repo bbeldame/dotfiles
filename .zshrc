@@ -37,18 +37,22 @@ function kclogsg() {
 }
 
 function kcgorec() {
-   kubectl config set-context ninja-rec --cluster=gke_monoprix-ninja-rec_europe-west1-d_master --user=gke_monoprix-ninja-rec_europe-west1-d_master --namespace=ninja
+   kubectl config set-context ninja-rec --cluster=gke_monoprix-ninja-rec_europe-west1-d_master --user=gke_monoprix-ninja-rec_europe-west1-d_master --namespace=bov2
    kubectl config use-context ninja-rec
 }
 
 function kcgodev() {
-   kubectl config set-context ninja-dev --cluster=gke_monoprix-ninja-dev_europe-west1-d_master --user=gke_monoprix-ninja-dev_europe-west1-d_master --namespace=ninja
+   kubectl config set-context ninja-dev --cluster=gke_monoprix-ninja-dev_europe-west1-d_master --user=gke_monoprix-ninja-dev_europe-west1-d_master --namespace=bov2
    kubectl config use-context ninja-dev
 }
 
 function kcgopreprod() {
-   kubectl config set-context ninja-preprod --cluster=gke_monoprix-ninja-preprod_europe-west1-d_master --user=gke_monoprix-ninja-preprod_europe-west1-d_master --namespace=ninja
+   kubectl config set-context ninja-preprod --cluster=gke_monoprix-ninja-preprod_europe-west1-d_master --user=gke_monoprix-ninja-preprod_europe-west1-d_master --namespace=bov2
    kubectl config use-context ninja-preprod
+}
+
+function kcgetport() {
+   kubectl describe pod $1 | grep Port:
 }
 
 function portki() {
