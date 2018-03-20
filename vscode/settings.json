@@ -13,5 +13,6 @@
     "editor.renderIndentGuides": true,
     "diffEditor.renderSideBySide": false,
     "workbench.panel.location": "bottom",
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": true
 }

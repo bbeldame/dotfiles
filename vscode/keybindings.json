@@ -34,11 +34,11 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+[Period]",
+        "key": "cmd+m",
         "command": "workbench.action.terminal.focusNext"
     },
     {
-        "key": "cmd+[Comma]",
+        "key": "cmd+l",
         "command": "workbench.action.terminal.focusPrevious"
     },
     {
@@ -144,5 +144,40 @@
         "key": "cmd+enter",
         "command": "rest-client.request",
         "when": "editorTextFocus && editorLangId == 'http'"
+    },
+    {
+        "key": "cmd+[Comma]",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+left",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+[Period]",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+[Quote]",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus"
     }
 ]
