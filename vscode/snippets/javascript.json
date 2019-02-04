@@ -19,5 +19,12 @@
 			"console.log('$1', JSON.stringify($1, null, 4));"
 		],
 		"description": "Log output to console with max depth in object"
+	},
+	"Console log of time in the line": {
+		"prefix": "cstime",
+		"body": [
+			"console.log('$TM_FILENAME_BASE $TM_LINE_NUMBER', new Date().toTimeString().split(' ')[0], new Date().getMilliseconds());"
+		],
+		"description": "Print console log with time on the line"
 	}
 }

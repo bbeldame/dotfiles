@@ -14,5 +14,7 @@
     "diffEditor.renderSideBySide": false,
     "workbench.panel.location": "bottom",
     "explorer.confirmDragAndDrop": false,
-    "extensions.ignoreRecommendations": true
+    "extensions.ignoreRecommendations": true,
+    "editor.formatOnSave": false,
+    "terminal.integrated.rendererType": "dom"
 }

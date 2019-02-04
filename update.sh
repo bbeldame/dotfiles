@@ -12,6 +12,7 @@ cp $HOME/.zshrc $DOTFOLDER/
 cp $HOME/.vimrc $DOTFOLDER/
 cd $DOTFOLDER
 git add .
+git diff --staged
 git commit -m "Update"
 git push
 cd $WHEREAMI

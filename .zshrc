@@ -10,6 +10,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source ~/.hidrc
 source <(kubectl completion zsh)
+source /usr/local/opt/kube-ps1/share/kube-ps1.sh
+PROMPT='$(kube_ps1)'$PROMPT
+
 
 function cs() {
    cd $1
@@ -37,17 +40,22 @@ function kclogsg() {
 }
 
 function kcgorec() {
-   kubectl config set-context ninja-rec --cluster=gke_monoprix-ninja-rec_europe-west1-d_master --user=gke_monoprix-ninja-rec_europe-west1-d_master --namespace=bov2
+   kubectl config set-context ninja-rec --cluster=gke_monoprix-ninja-rec_europe-west1-d_master --user=gke_monoprix-ninja-rec_europe-west1-d_master --namespace=gta
    kubectl config use-context ninja-rec
 }
 
+function kcgopreprod() {
+   kubectl config set-context ninja-preprod --cluster=gke_monoprix-ninja-preprod_europe-west1-d_master --user=gke_monoprix-ninja-preprod_europe-west1-d_master --namespace=ninja
+   kubectl config use-context ninja-preprod
+}
+
 function kcgodev() {
-   kubectl config set-context ninja-dev --cluster=gke_monoprix-ninja-dev_europe-west1-d_master --user=gke_monoprix-ninja-dev_europe-west1-d_master --namespace=bov2
+   kubectl config set-context ninja-dev --cluster=gke_monoprix-ninja-dev_europe-west1-d_master --user=gke_monoprix-ninja-dev_europe-west1-d_master --namespace=gta
    kubectl config use-context ninja-dev
 }
 
 function kcgopreprod() {
-   kubectl config set-context ninja-preprod --cluster=gke_monoprix-ninja-preprod_europe-west1-d_master --user=gke_monoprix-ninja-preprod_europe-west1-d_master --namespace=bov2
+   kubectl config set-context ninja-preprod --cluster=gke_monoprix-ninja-preprod_europe-west1-d_master --user=gke_monoprix-ninja-preprod_europe-west1-d_master --namespace=gta
    kubectl config use-context ninja-preprod
 }
 
@@ -107,7 +115,7 @@ alias 42FC="sh ~/Development/42/42FileChecker/42FileChecker.sh"
 alias gogojm="node index.js"
 alias pullover="git stash && git pull && git stash pop"
 alias kcpf="kc port-forward"
-alias kcgp="kc get pods"
+alias kcgp="kcwhere ; kc get pods"
 alias kcdp="kc describe pod"
 alias weather="curl wttr.in"
 alias al="adb logcat"
@@ -119,7 +127,7 @@ alias sf="screenfetch -E"
 alias mr="make re"
 alias mf="make fclean"
 alias rs="echo fail"
-alias kcwhere="kc config current-context"
+alias kcwhere="kc config get-contexts | grep \"*\""
 alias rnd="adb shell input keyevent KEYCODE_MENU"
 alias es="elasticsearch"
 alias gds="git diff --staged"
@@ -128,6 +136,8 @@ alias csfiles="cs ~/Development/http/files"
 alias gc="gcloud"
 alias kibana="/usr/local/Cellar/kibana@5.6/5.6.5/bin/kibana"
 alias asmcor="~/Development/42/vm_champs/asm"
+alias kclf="kc logs -f"
+alias devopspush="git pull --rebase origin master && git pull --rebase origin auto-deploy && git pull --rebase origin master && git push"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
