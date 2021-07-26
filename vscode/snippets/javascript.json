@@ -26,5 +26,48 @@
 			"console.log('$TM_FILENAME_BASE $TM_LINE_NUMBER', new Date().toTimeString().split(' ')[0], new Date().getMilliseconds());"
 		],
 		"description": "Print console log with time on the line"
+	},
+	"New file react hs": {
+		"prefix": "newfilereacths",
+		"body": [
+"import React, { useState } from 'react';",
+"import { useMutation, useQuery } from '@apollo/react-hooks';",
+"import PropTypes from 'prop-types';",
+"import { withTranslation } from 'i18n';",
+"import { Title, Text, Button, Input, Datepicker, ProgressBar } from '@oyez/hyperbook';",
+"import ${TM_FILENAME_BASE}Wrapper from './${TM_FILENAME_BASE}Wrapper';",
+"",
+"const ${TM_FILENAME_BASE} = ({ t }) => {",
+"  return (",
+"    <${TM_FILENAME_BASE}Wrapper>",
+"      <div>Salut bg</div>",
+"    </${TM_FILENAME_BASE}Wrapper>",
+"  )",
+"};",
+"",
+"${TM_FILENAME_BASE}.propTypes = {",
+"  t: PropTypes.func.isRequired,",
+"};",
+"",
+"${TM_FILENAME_BASE}.getInitialProps = async () => ({",
+"  namespacesRequired: ['MyAccount'],",
+"});",
+"",
+"export default withTranslation('MyAccount')(${TM_FILENAME_BASE});",
+""
+		]
+	},
+	"New file react wrapper hs": {
+		"prefix": "newfilereactwrapperhs",
+		"body": [
+"import styled from 'styled-components';",
+"import { devices } from '@oyez/hyperbook';",
+"",
+"const ${TM_FILENAME_BASE} = styled.div`",
+"  padding: 0 0 220px;",
+"`;",
+"",
+"export default ${TM_FILENAME_BASE};"
+		]
 	}
 }
