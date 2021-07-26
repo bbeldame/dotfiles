@@ -1,17 +1,8 @@
-export ZSH=/Users/bbeldame/.oh-my-zsh
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=/Users/bbeldame/Library/Android/sdk/tools/:$PATH
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/bbeldame/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/bbeldame/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+export ZSH=/Users/admin/.oh-my-zsh
 
 ZSH_THEME="miloshadzic"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-source ~/.hidrc
-source <(kubectl completion zsh)
-source /usr/local/opt/kube-ps1/share/kube-ps1.sh
-PROMPT='$(kube_ps1)'$PROMPT
 
 
 function cs() {
@@ -143,4 +134,9 @@ export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-nvm use default
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/admin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/admin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/admin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/admin/google-cloud-sdk/completion.zsh.inc'; fi
