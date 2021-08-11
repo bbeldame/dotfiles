@@ -29,26 +29,6 @@ function kclogsg() {
    kubectl logs -f `kcgpg $1 | head -n 1`
 }
 
-function kcgorec() {
-   kubectl config set-context ninja-rec --cluster=gke_monoprix-ninja-rec_europe-west1-d_master --user=gke_monoprix-ninja-rec_europe-west1-d_master --namespace=gta
-   kubectl config use-context ninja-rec
-}
-
-function kcgopreprod() {
-   kubectl config set-context ninja-preprod --cluster=gke_monoprix-ninja-preprod_europe-west1-d_master --user=gke_monoprix-ninja-preprod_europe-west1-d_master --namespace=ninja
-   kubectl config use-context ninja-preprod
-}
-
-function kcgodev() {
-   kubectl config set-context ninja-dev --cluster=gke_monoprix-ninja-dev_europe-west1-d_master --user=gke_monoprix-ninja-dev_europe-west1-d_master --namespace=gta
-   kubectl config use-context ninja-dev
-}
-
-function kcgopreprod() {
-   kubectl config set-context ninja-preprod --cluster=gke_monoprix-ninja-preprod_europe-west1-d_master --user=gke_monoprix-ninja-preprod_europe-west1-d_master --namespace=gta
-   kubectl config use-context ninja-preprod
-}
-
 function kcgetport() {
    kubectl describe pod $1 | grep Port:
 }
